@@ -1,6 +1,6 @@
 package com.deveficiente.workshop.demo.controller;
 
-import com.deveficiente.workshop.demo.Livro;
+import com.deveficiente.workshop.demo.domain.model.Livro;
 import com.deveficiente.workshop.demo.controller.dto.LivroRequest;
 import com.deveficiente.workshop.demo.controller.dto.LivroResponse;
 import com.deveficiente.workshop.demo.controller.dto.LivroResponseDetail;

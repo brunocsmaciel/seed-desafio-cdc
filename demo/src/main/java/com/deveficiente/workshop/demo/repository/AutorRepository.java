@@ -1,6 +1,6 @@
 package com.deveficiente.workshop.demo.repository;
 
-import com.deveficiente.workshop.demo.Autor;
+import com.deveficiente.workshop.demo.domain.model.Autor;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

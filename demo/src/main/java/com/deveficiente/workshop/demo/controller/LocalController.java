@@ -1,7 +1,7 @@
 package com.deveficiente.workshop.demo.controller;
 
-import com.deveficiente.workshop.demo.Estado;
-import com.deveficiente.workshop.demo.Pais;
+import com.deveficiente.workshop.demo.domain.model.Estado;
+import com.deveficiente.workshop.demo.domain.model.Pais;
 import com.deveficiente.workshop.demo.controller.dto.EstadoRequest;
 import com.deveficiente.workshop.demo.controller.dto.PaisRequest;
 import jakarta.persistence.EntityManager;

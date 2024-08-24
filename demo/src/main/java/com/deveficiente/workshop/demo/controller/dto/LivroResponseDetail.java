@@ -1,7 +1,7 @@
 package com.deveficiente.workshop.demo.controller.dto;
 
-import com.deveficiente.workshop.demo.Categoria;
-import com.deveficiente.workshop.demo.Livro;
+import com.deveficiente.workshop.demo.domain.model.Categoria;
+import com.deveficiente.workshop.demo.domain.model.Livro;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

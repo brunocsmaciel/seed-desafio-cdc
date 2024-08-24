@@ -1,7 +1,7 @@
 package com.deveficiente.workshop.demo.controller;
 
 
-import com.deveficiente.workshop.demo.Categoria;
+import com.deveficiente.workshop.demo.domain.model.Categoria;
 import com.deveficiente.workshop.demo.repository.CategoriaRepository;
 import com.deveficiente.workshop.demo.controller.dto.CategoriaRequest;
 import jakarta.validation.Valid;

@@ -1,6 +1,6 @@
 package com.deveficiente.workshop.demo.controller.dto;
 
-import com.deveficiente.workshop.demo.Autor;
+import com.deveficiente.workshop.demo.domain.model.Autor;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

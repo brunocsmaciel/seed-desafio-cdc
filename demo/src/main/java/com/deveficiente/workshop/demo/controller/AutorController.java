@@ -1,6 +1,6 @@
 package com.deveficiente.workshop.demo.controller;
 
-import com.deveficiente.workshop.demo.Autor;
+import com.deveficiente.workshop.demo.domain.model.Autor;
 import com.deveficiente.workshop.demo.repository.AutorRepository;
 import com.deveficiente.workshop.demo.controller.dto.AutorRequest;
 import jakarta.validation.Valid;

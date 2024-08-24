@@ -1,8 +1,8 @@
 package com.deveficiente.workshop.demo.controller.dto;
 
-import com.deveficiente.workshop.demo.Autor;
-import com.deveficiente.workshop.demo.Categoria;
-import com.deveficiente.workshop.demo.Livro;
+import com.deveficiente.workshop.demo.domain.model.Autor;
+import com.deveficiente.workshop.demo.domain.model.Categoria;
+import com.deveficiente.workshop.demo.domain.model.Livro;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.EntityManager;
 import jakarta.validation.constraints.*;
@@ -20,8 +20,8 @@ public record LivroRequest(@NotBlank String titulo,
                            @NotNull @Min(value = 100) Long numeroPaginas,
                            @NotBlank String isbn,
                            @Future @JsonFormat(pattern = "dd/MM/yyyy", shape = Shape.STRING) LocalDate dataPublicacao,
-                           @NotNull Long idCategoria,
-                           @NotNull Long idAutor) {
+                           @NotNull PaisRequest idCategoria,
+                           @NotNull PaisRequest idAutor) {
 
 
     //5
