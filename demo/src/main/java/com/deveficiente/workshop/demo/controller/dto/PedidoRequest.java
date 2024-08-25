@@ -26,11 +26,24 @@ public record PedidoRequest(@Positive @NotNull BigDecimal total,
                 .map(item -> item.toModel(manager))
                 .collect(Collectors.toSet());
 
-        return (compra) -> {
+        return compra -> {
             Pedido pedido = new Pedido(compra, itensCalculados);
             Assert.isTrue(pedido.totalIgual(total), "Total enviado não corresponde ao total real");
             return pedido;
         };
-
     }
+
+    public Pedido toModel(Compra compra, EntityManager manager) {
+
+        Set<ItemPedido> itensCalculados = itens
+                .stream()
+                .map(item -> item.toModel(manager))
+                .collect(Collectors.toSet());
+
+        Pedido pedido = new Pedido(compra, itensCalculados);
+        Assert.isTrue(pedido.totalIgual(total), "Total enviado não corresponde ao total real");
+        return pedido;
+    }
+
+
 }

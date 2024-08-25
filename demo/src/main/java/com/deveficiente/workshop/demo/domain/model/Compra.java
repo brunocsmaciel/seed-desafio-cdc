@@ -29,6 +29,8 @@ public class Compra {
     private final String cep;
     @OneToOne(mappedBy = "compra", cascade = CascadeType.PERSIST)
     private final Pedido pedido;
+    @Embedded
+    private CupomAplicado cupomAplicado;
 
     public Compra(@NotBlank @Email String email,
                   @NotBlank String nome,
@@ -58,7 +60,6 @@ public class Compra {
         this.estado = estado;
     }
 
-
     @Override
     public String toString() {
         return "Compra{" +
@@ -73,6 +74,18 @@ public class Compra {
                 ", telefone='" + telefone + '\'' +
                 ", cep='" + cep + '\'' +
                 ", pedido=" + pedido +
+                ", cupom=" + cupomAplicado +
                 '}';
+    }
+
+    public void aplicaCupom(Cupom cupom) {
+        if (this.cupomAplicado != null) {
+            throw new UnsupportedOperationException("não é possível associar outro cupom a essa compra");
+        }
+
+        if (!cupom.ehValido()) {
+            throw new UnsupportedOperationException("cupom aplicado não é mais valido");
+        }
+        this.cupomAplicado = new CupomAplicado(cupom);
     }
 }
